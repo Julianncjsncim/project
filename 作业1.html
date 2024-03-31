@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Web Page</title>
+      <link rel="stylesheet" href="./style.css" />
+  </head>
+  <style>
+    .container {
+      width: 500px;
+      background-color: #c1b9b999;
+      padding: 100px;
+    }
+    .input-container {
+      margin-top: 50px;
+    }
+    body {
+      background-image: url("sun.jpg.jpg");
+      background-size: cover; /* 适应 */
+      background-attachment: fixed; /* 固定 */
+      background-position: center; /* 居中 */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <h1 style="color: #fff">这是一个小小的猜字谜游戏</h1>
+    <div class="container">
+      <div
+        class="puzzle"
+        style="font-weight: 600; font-size: 25px; color: black"
+      >
+        谜题头尾都是一,腰身也是一,听来都是一,其实不是一。 （打一字）
+      </div>
+      <div class="u-message" style="margin: 50px 0; color: red"></div>
+      <!-- 输入答案 -->
+      <div class="input-container">
+        <input type="text" id="user-input" placeholder="请输入答案" />
+        <button id="submit-btn">提交</button>
+      </div>
+    </div>
+    <h1 style="color: #fff">22视传王清岚作业</h1>
+  </body>
+  <script>
+    const submitBtn = document.getElementById("submit-btn");
+    const userInput = document.getElementById("user-input");
+    const uMessage = document.querySelector(".u-message");
+    submitBtn.addEventListener("click", () => {
+      const userAnswer = userInput.value.trim();
+      // 判断输入正确否
+      if (userAnswer == "三") {
+        uMessage.textContent = "恭喜你，答对了" + "你的答案是" + userAnswer;
+
+        uMessage.style.color = "green";
+      } else {
+        uMessage.textContent = "很遗憾，答错了！" + "你的答案是" + userAnswer;
+        uMessage.style.color = "red";
+      }
+    });
+  </script>
+</html>
