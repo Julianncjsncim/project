@@ -1,0 +1,214 @@
+
+.home-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #1b1c26, #1c2123);
+}
+
+.home-title {
+  background: linear-gradient(
+    75deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 33.33%,
+    rgba(255, 255, 255, 0) 66.67%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 300% 100%;
+  background-position-x: 0%;
+  color: transparent;
+
+  -webkit-background-clip: text;
+  font-size: 60px;
+  font-weight: 700;
+
+  transition: background-position 1.5s ease-in-out;
+  /* 专门学习了动画制作，，老师请看—— */
+  animation: fontAnimate 5s;
+}
+
+.home-utils {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.home-utils-item {
+  margin-bottom: 10px;
+  width: 200px;
+  .el-button {
+    width: 100%;
+  }
+}
+.home-utils-title {
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+/* 动画 */
+@keyframes fontAnimate {
+  0% {
+    background-position-x: 100%;
+  }
+  50% {
+    background-position-x: 50%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
+
+/* 按钮 */
+.button {
+  width: 140px;
+  line-height: 38px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  border-radius: 5px;
+  margin: 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+.button.rarrow,
+.button.larrow {
+  overflow: visible;
+}
+.rarrow:after,
+.rarrow:before,
+.larrow:after,
+.larrow:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.rarrow:before {
+  width: 27px;
+  height: 27px;
+  top: 6px;
+  right: -13px;
+  clip: rect(auto auto 26px 2px);
+}
+.rarrow:after {
+  top: 6px;
+  right: -12px;
+  clip: rect(auto auto 26px 2px);
+}
+.gray.rarrow:before {
+  background: #d6dbe0;
+}
+.gray.rarrow:after {
+  box-shadow: 0 1px 0 #fff inset, -1px 0 0 #b7babd inset;
+  background: -webkit-linear-gradient(top left, #f2f3f7, #e4e8ec);
+  background: -moz-linear-gradient(top left, #f2f3f7, #e4e8ec);
+  background: linear-gradient(top left, #f2f3f7, #e4e8ec);
+}
+.black.rarrow:before {
+  background: #333;
+}
+.black.rarrow:after {
+  box-shadow: 0 1px 0 #8b8b8b inset, -1px 0 0 #3d3d3d inset,
+    -2px 0 0 #8b8b8b inset;
+  background: -webkit-linear-gradient(top left, #656565, #4c4c4c);
+  background: -moz-linear-gradient(top left, #656565, #4c4c4c);
+  background: linear-gradient(top left, #656565, #4c4c4c);
+}
+.red.rarrow:before {
+  background: #b42323;
+}
+.red.rarrow:after {
+  box-shadow: 0 1px 0 #e99494 inset, -1px 0 0 #954b4b inset,
+    -2px 0 0 #e99494 inset;
+  background: -webkit-linear-gradient(top left, #d53939, #b92929);
+  background: -moz-linear-gradient(top left, #d53939, #b92929);
+  background: linear-gradient(top left, #d53939, #b92929);
+}
+.yellow.rarrow:before {
+  background: #d2a000;
+}
+.yellow.rarrow:after {
+  box-shadow: 0 1px 0 #fedd71 inset, -1px 0 0 #a38b39 inset,
+    -2px 0 0 #fedd71 inset;
+  background: -webkit-linear-gradient(top left, #fece34, #d8a605);
+  background: -moz-linear-gradient(top left, #fece34, #d8a605);
+  background: linear-gradient(top left, #fece34, #d8a605);
+}
+.green.rarrow:before {
+  background: #64c878;
+}
+.green.rarrow:after {
+  box-shadow: 0 1px 0 #b9ecc4 inset, -1px 0 0 #6c9f76 inset,
+    -2px 0 0 #b9ecc4 inset;
+  background: -webkit-linear-gradient(top left, #90dfa2, #84d494);
+  background: -moz-linear-gradient(top left, #90dfa2, #84d494);
+  background: linear-gradient(top left, #90dfa2, #84d494);
+}
+.blue.rarrow:before {
+  background: #1e7db9;
+}
+.blue.rarrow:after {
+  box-shadow: 0 1px 0 #8fcaee inset, -1px 0 0 #497897 inset,
+    -2px 0 0 #8fcaee inset;
+  background: -webkit-linear-gradient(top left, #42a4e0, #2e88c0);
+  background: -moz-linear-gradient(top left, #42a4e0, #2e88c0);
+  background: linear-gradient(top left, #42a4e0, #2e88c0);
+}
+.button.gray {
+  color: #8c96a0;
+  text-shadow: 1px 1px 1px #fff;
+  border: 1px solid #dce1e6;
+  box-shadow: 0 1px 2px #fff inset, 0 -1px 0 #a8abae inset;
+  background: -webkit-linear-gradient(top, #f2f3f7, #e4e8ec);
+  background: -moz-linear-gradient(top, #f2f3f7, #e4e8ec);
+  background: linear-gradient(top, #f2f3f7, #e4e8ec);
+}
+.button.black {
+  border: 1px solid #333;
+  box-shadow: 0 1px 2px #8b8b8b inset, 0 -1px 0 #3d3d3d inset,
+    0 -2px 3px #8b8b8b inset;
+  background: -webkit-linear-gradient(top, #656565, #4c4c4c);
+  background: -moz-linear-gradient(top, #656565, #4a4a4a);
+  background: linear-gradient(top, #656565, #4a4a4a);
+}
+.button.red {
+  border: 1px solid #b42323;
+  box-shadow: 0 1px 2px #e99494 inset, 0 -1px 0 #954b4b inset,
+    0 -2px 3px #e99494 inset;
+  background: -webkit-linear-gradient(top, #d53939, #b92929);
+  background: -moz-linear-gradient(top, #d53939, #b92929);
+  background: linear-gradient(top, #d53939, #b92929);
+}
+.button.yellow {
+  border: 1px solid #d2a000;
+  box-shadow: 0 1px 2px #fedd71 inset, 0 -1px 0 #a38b39 inset,
+    0 -2px 3px #fedd71 inset;
+  background: -webkit-linear-gradient(top, #fece34, #d8a605);
+  background: -moz-linear-gradient(top, #fece34, #d8a605);
+  background: linear-gradient(top, #fece34, #d8a605);
+}
+.button.green {
+  border: 1px solid #64c878;
+  box-shadow: 0 1px 2px #b9ecc4 inset, 0 -1px 0 #6c9f76 inset,
+    0 -2px 3px #b9ecc4 inset;
+  background: -webkit-linear-gradient(top, #90dfa2, #84d494);
+  background: -moz-linear-gradient(top, #90dfa2, #84d494);
+  background: linear-gradient(top, #90dfa2, #84d494);
+}
+.button.blue {
+  border: 1px solid #1e7db9;
+  box-shadow: 0 1px 2px #8fcaee inset, 0 -1px 0 #497897 inset,
+    0 -2px 3px #8fcaee inset;
+  background: -webkit-linear-gradient(top, #42a4e0, #2e88c0);
+  background: -moz-linear-gradient(top, #42a4e0, #2e88c0);
+  background: linear-gradient(top, #42a4e0, #2e88c0);
+}

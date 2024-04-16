@@ -1,0 +1,207 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+.li {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  justify-content: center;
+  /* 设置背景图的颜色 */
+  background-color: #ffffff;
+  
+  
+  /* 设置渐变色的颜色 */
+  /* background-image: linear-gradient(to bottom, #892931, #100223); */
+}
+
+ul {
+  width: 500px;
+}
+
+.li {
+  list-style: none;
+  /* 设置文字加粗 ok你再看看 */
+  font-weight: 600;
+  /* 设置文字颜色 */
+  color: #0b0c0c;
+  font-size: 18px;
+  margin: 48px 0;
+  position: relative;
+}
+
+.li::before,
+.li::after {
+  content: "";
+  display: block;
+  /* 这边设置进度的高度 粗细*/
+  height: 7px;
+  width: 100%;
+  /* 进度条底色 */
+  background-color: #000203;
+  position: absolute;
+  bottom: -28px;
+  border-radius: 6px;
+}
+
+.li::before {
+  /* 设置进度条的阴影 */
+  box-shadow: 0 0 6px rgba(75, 207, 250, 0.2);
+}
+/* 无敌帅 */
+.li::after {
+  /* 这边是改变进度调的渐变颜色 */
+  background-image: linear-gradient(to left, hsl(195, 10%, 76%), #646969);
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+/* 代码108行的以下@keynamed是定义动画的名称 */
+/* 下面这些都是运用动画  动画下面定义好了 比如animation-name：js  => js是定义好的动画名字  表示运用js名字的动画 */
+
+/* 这里表示给class为js的元素 运用叫js名字的动画 */
+/* 以此类推 */
+.js::after {
+  animation-name: js;
+}
+
+.react::after {
+  animation-name: react;
+}
+
+.html5::after {
+  animation-name: html5;
+}
+
+.css3::after {
+  animation-name: css3;
+}
+
+.sketch::after {
+  animation-name: sketch;
+}
+
+.b::after {
+  animation-name: react;
+}
+
+.c::after {
+  animation-name: c;
+}
+
+.d::after {
+  animation-name: d;
+}
+
+.e::after {
+  animation-name: e;
+}
+.f::after {
+  animation-name: f;
+}
+/* 这里设置 定义了js名字的动画 */
+@keyframes js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes react {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes html5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes css3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes sketch {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes a {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+@keyframes b {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes c {
+  from {
+    width: 0;
+  }
+  to {
+    width: 49%;
+  }
+}
+@keyframes d {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25%;
+  }
+}
+@keyframes e {
+  from {
+    width: 0;
+  }
+  to {
+    width: 55%;
+  }
+}
+@keyframes f {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>自我介绍</title>
+    <link rel="stylesheet" href="css/zwjs.css" />
+  </head>
+  <body>
+    <div class="jieshao">
+      <div class="header">
+        <img src="images/banner.png" />
+      </div>
+      <section>
+        <div class="jiaxiang">
+          <div class="sxbt">
+            <h2>家人朋友</h2>
+          </div>
+          <div class="jiaxiangleft">
+            <img src="images/jiaxiang.jpg" />
+          </div>
+          <div class="jiaxiangright">
+            <h3>清岚的家</h3>
+            <p>
+              王清岚的家曾经是普通而常见的三口之家，严厉的父亲，宽和的母亲。但是在18年的时候，妹妹出生了。时至今日，在清岚已经考上大学的日子里，
+              在爸爸妈妈的同事吐槽孩子上学家中日渐冷清的声音里，六岁的妹妹为家里带来了全新的生机。妹妹说很爱清岚，但是清岚有时还是会怀疑，
+              妹妹爱的到底是自己，还是她次次不重样的礼物。
+          </div>
+          <div style="clear: both"></div>
+          <div class="aihao">
+            <div class="sxbt">
+              <h2>清岚的家人们</h2>
+            </div>
+            <ul>
+              <li>
+                <img src="images/meijing.png" />
+                <p>爸爸</p>
+              </li>
+              <li>
+                <img src="images/meijing1.png" />
+                <p>妈妈</p>
+              </li>
+              <li>
+                <img src="images/meijing2.png" />
+                <p>妹妹</p>
+              </li>
+              <li>
+                <img src="images/meijing3.png" />
+                <p>清岚</p>
+              </li>
+            </ul>
+            <div style="clear: both"></div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>王清岚的oc王清岚的介绍网页</p>
+        <p>22视传王清岚  202218083008</p>
+      </footer>
+    </div>
+    <div class="icon-Home-jiaixang">
+      <img style="width: 100%; height: 100%" src="./icon/home.png" alt="" />
+    </div>
+    <!-- 向左箭头 -->
+    <div class="icon-right-jiaxiang">
+      <img style="width: 100%; height: 100%" src="./icon/right.png" alt="" />
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+  <script>
+    let iconRight1 = document.querySelector(".icon-right-jiaxiang");
+    iconRight1.addEventListener("click", function () {
+      // 跳转到xuexiao.html页面
+      window.location.href = "xuexiao.html";
+    });
+    let iconHomeJiaxiang = document.querySelector(".icon-Home-jiaixang");
+    iconHomeJiaxiang.addEventListener("click", function () {
+      // 跳转到Home.html页面
+      window.location.href = "./Home.html";
+    });
+  </script>
+</html>
